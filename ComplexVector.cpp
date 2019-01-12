@@ -18,7 +18,7 @@ void ComplexVector::add(ComplexVector smt) {
 
 void ComplexVector::random() {  //two vectors are similar  
 	srand(time(0));
-	size = 2;
+	size = rand()%5;
 	Complex* ness = new Complex[size];
 	for (int i = 0; i < size; ++i) {
 		double real = (float (rand())) / ((float) (RAND_MAX / 10));
@@ -29,7 +29,7 @@ void ComplexVector::random() {  //two vectors are similar
 }
 
 void ComplexVector::plus(ComplexVector smt) {
-	size = 2;
+	size = size / 2;
 	for (int i = 0; i < size; i++) {
 	 arr[i].add(smt.arr[i]);
 	}
